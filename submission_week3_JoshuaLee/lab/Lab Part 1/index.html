@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Week 2 Homework</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="content-1"></div>
+  <div id="content-2"></div>
+
+  <script type="text/javascript">
+    // Write HTML with JS
+    document.getElementById('content-1').innerHTML =
+      '<h1>Week 3 Lab Activity</h1>';
+
+    // Loop through array, build HTML block and finally display it on the page
+    let amusementRides = [
+      {
+        id: '1',
+        name: 'Roller Coaster',
+        price: 10,
+        open: ['Mon', 'Tues', 'Wed', 'Fri'],
+        limited: 'yes'
+      },
+      {
+        id: '2',
+        name: 'Cars',
+        price: 15,
+        open: ['Wed', 'Thur', 'Fri', 'Sat'],
+        limited: 'no'
+      },
+      {
+        id: '3',
+        name: 'House',
+        price: 5,
+        open: ['Mon', 'Tues', 'Wed', 'Fri'],
+        limited: 'no'
+      }
+    ];
+
+    let result = '';
+
+    const doublePrices = rides => {
+      rides.forEach(ride => {
+        if (ride.id === '2') {
+          ride.price = ride.price;
+        } else {
+          ride.price = 2 * ride.price;
+        }
+      });
+    };
+
+    const debugAmusementRides = rides => {
+      rides.forEach(ride => {
+        let name = ride.name;
+        let newPrice = ride.price;
+        result += `${name}: ${newPrice} <br/>`;
+      })
+    };
+
+    doublePrices(amusementRides);
+    debugAmusementRides(amusementRides);
+
+    document.getElementById('content-2').innerHTML = result;
+  </script>
+</body>
+
+</html>

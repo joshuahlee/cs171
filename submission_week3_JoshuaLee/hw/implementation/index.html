@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CS171 - HW2</title>
+
+    <!-- Load CSS libraries -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <!-- own CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ********************** ADD YOUR HTML-ELEMENTS HERE *********************** -->
+    <!-- Make sure to use proper bootstrap! -->
+    <!-- You will need a div-container with the id: 'chart-area' -->
+    <div class="d-flex justify-content-center align-items-center" id="logo">
+      <img src="./img/PizzaWorld-Logo.png">
+    </div>
+    <div class="row">
+      <div class="container col justify-content-center" id="chart-area">
+        <!-- drop down menus -->
+        <div class="row">
+          <div class="col">
+            <div class="user-control">
+              <div class="form-group">
+                <label for="mode-category">Choose location:</label>
+                <select
+                  id="location-category"
+                  class="form-control"
+                  onchange="filterData()"
+                >
+                  <option value="all">All</option>
+                  <option value="Boston">Boston</option>
+                  <option value="Cambridge">Cambridge</option>
+                  <option value="Somerville">Somerville</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- drop down menu -->
+          <div class="col">
+            <div class="user-control">
+              <div class="form-group">
+                <label for="mode-category">Choose order type:</label>
+                <select
+                  id="mode-category"
+                  class="form-control"
+                  onchange="filterData()"
+                >
+                  <option value="all">All</option>
+                  <option value="web">Web</option>
+                  <option value="phone">Phone</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex justify-content-center align-items-center">
+        <div id="summary-data"></div>
+      </div>
+    </div>
+    <div id="tooltip" class="hidden">
+        <p><strong>Deliveries</strong></p>
+        <p><span id="value"></span></p>
+    </div>
+
+
+    <!-- embedding JS libraries -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- d3 -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+
+    <!-- data -->
+    <script src="data/delivery-data.js"></script>
+    <script src="data/feedback-data.js"></script>
+
+    <!-- bar chart -->
+    <script src="js/barchart.js"></script>
+
+    <!-- ****** TODO: FILTER DATA, DISPLAY BAR CHART & KEY FIGURES ****** -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

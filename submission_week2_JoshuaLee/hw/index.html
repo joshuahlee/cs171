@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Week 2 Homework</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container" class="row">
+      <div class="row justify-content-center">
+        <h1 class="font-weight-light">CS 171: Week 2 Homework</h1>
+      </div>
+      <hr />
+      <div class="row justify-content-center">
+        <h2 class="headers">1. Sortable Table</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div>
+          <table class="table table-striped sortable">
+            <thead>
+              <tr>
+                <th scope="col">Country</th>
+                <th scope="col">1990</th>
+                <th scope="col">2000</th>
+                <th scope="col">2014</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Central African Republic</td>
+                <td>51.9</td>
+                <td>51.4</td>
+                <td>46.9</td>
+              </tr>
+              <tr>
+                <td>Chad</td>
+                <td>65</td>
+                <td>52</td>
+                <td>44.6</td>
+              </tr>
+              <tr>
+                <td>Haiti</td>
+                <td>52.1</td>
+                <td>42.8</td>
+                <td>37.3</td>
+              </tr>
+              <tr>
+                <td>Madagascar</td>
+                <td>44.8</td>
+                <td>44.1</td>
+                <td>36.3</td>
+              </tr>
+              <tr>
+                <td>Sierra Leone</td>
+                <td>58.8</td>
+                <td>53.5</td>
+                <td>38.9</td>
+              </tr>
+              <tr>
+                <td>East Timor</td>
+                <td>——</td>
+                <td>——</td>
+                <td>40.7</td>
+              </tr>
+              <tr>
+                <td>Zambia</td>
+                <td>47</td>
+                <td>50.9</td>
+                <td>41.1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <p>
+          * Data underlying the calculation of the 1990, 2000, and 2014 Global
+          Hunger Index Scores
+        </p>
+      </div>
+      <hr />
+      <div class="row justify-content-center">
+        <h2 class="headers">2. Infographic Design Critique</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col">
+          <img
+            src="./cs171-hw2-infographic.png"
+            alt="infographic"
+            width="100%"
+            height="100%"
+          />
+        </div>
+        <div class="col">
+          <p>
+            The audience are those who might be interested in working at Google
+            or are interested in benchmarking salaries to Google or between
+            different positions at the firm. The question that the infographic
+            answers are "How much do different positions at Google make?". The
+            data is mainly categorical and quantitative. Breaking that down more
+            specifically, the categorical data are the position types where as
+            the numerical quantitative data is split up between a lower bound
+            and a higher bound to produce a range of expected income. The data
+            also ranks each position by the lower bound going from highest being
+            1 to the lowest being 10. The data is visually encoded by color
+            coding the positions to the income range along with a corresponding
+            slice of the middle graph. A specific thing that I like about this
+            visual is that it is clear which positions make how much money. The
+            one thing that can be clarified is what the corresponding slice in
+            the middle represents. There are no legends that describe what the
+            center circle should be interpreted as, and because the slices are
+            over lapping and don't make a whole it makes it confusing to
+            understand the significance of the slices in relationship to other
+            slices and the whole graph. My assumption of what the center part
+            represents is that the area corresponds to how much money goes to
+            paying those specific positions in relation to others however that
+            is not made very clear.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="js/sortable.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
