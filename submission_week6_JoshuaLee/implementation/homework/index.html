@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CS171 - HW 5</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>FIFA World Cup<sup>TM</sup></h1>
+      <h2>All Time Statistics</h2>
+
+      <!-- Parent container for the visualization -->
+      <div class="row">
+        <div class="col">
+          <form>
+            <div>
+              <label for="chart-data">Chart Data:</label>
+              <select class="form-control" id="chart-data" name="cars">
+                <option value="GOALS">Goals</option>
+                <option value="AVERAGE_GOALS">Average Goals</option>
+                <option value="MATCHES">Matches</option>
+                <option value="TEAMS">Team</option>
+                <option value="AVERAGE_ATTENDANCE">Average Attendance</option>
+              </select>
+              <label for="years">Time Period:</label>
+              <input
+                type="text"
+                id="start-year"
+                name="start-year"
+                value="1930"
+              />
+              -
+              <input type="text" id="end-year" name="end-year" value="2014" />
+              <button type="button" class="btn btn-primary" id="change-time">
+                Filter
+              </button>
+            </div>
+          </form>
+          <div id="chart-area"></div>
+        </div>
+        <div class="col">
+          <div id="details">
+            <div class="row justify-content-center">
+              <h5 id="title"></h5>
+            </div>
+            <div class="row justify-content-center">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th scope="row">Winner</th>
+                    <td id="winner"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Goals</th>
+                    <td id="goals"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Average Goals</th>
+                    <td id="average"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Matches</th>
+                    <td id="matches"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Teams</th>
+                    <td id="teams"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Average Attendance</th>
+                    <td id="attendance"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load JS libraries: jQuery, bootstrap, D3, D3 tooltip -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/d3-tip.js"></script>
+
+    <!-- Your implementation -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

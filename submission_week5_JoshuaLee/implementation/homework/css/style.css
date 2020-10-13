@@ -1,0 +1,35 @@
+@font-face {
+    font-family: myCustomFont;
+    src: url(../fonts/Roboto/)
+}
+
+body {
+    font-family: myCustomFont;
+}
+
+#title {
+    font-size: 60px;
+    color: #1DA1F2;
+    background: #E1E8ED;
+    padding: 2rem 0 2rem;
+}
+
+.col {
+    background: #E1E8ED;
+}
+
+.building-label {
+    font-size: 15px;
+}
+
+.height-label {
+    font-size: 15px;
+}
+
+p {
+    font-size: 10px;
+}
+
+.specific {
+    padding-top: 50px;
+}
